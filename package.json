@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "prepare": "yarn tslint && lerna run prepare",
+    "rebuild:browser": "theia rebuild:browser",
+    "tslint-fix": "tslint --fix --project theia-html-extension",
+    "tslint": "tslint --project theia-html-extension"
+  },
+  "devDependencies": {
+    "lerna": "2.4.0",
+    "tslint": "5.10.0"
+  },
+  "workspaces": [
+    "theia-html-extension", "browser-app"
+  ]
+}

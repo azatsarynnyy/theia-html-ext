@@ -1,0 +1,38 @@
+{
+  "name": "theia-html-extension",
+  "keywords": [
+    "theia-extension",
+    "che"
+  ],
+  "version": "0.0.0",
+  "author": "Artem Zatsarynnyi",
+  "license": "EPL-2.0",
+  "contributors": [
+    {
+      "name": "Artem Zatsarynnyi",
+      "email": "azatsary@redhat.com"
+    }
+  ],
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "0.3.14"
+  },
+  "devDependencies": {
+    "rimraf": "2.6.2",
+    "typescript": "2.9.2"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/html-frontend-module"
+    }
+  ]
+}
