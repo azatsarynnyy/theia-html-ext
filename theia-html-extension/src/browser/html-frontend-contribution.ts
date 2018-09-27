@@ -42,9 +42,13 @@ export class HtmlFrontendContribution implements CommandContribution, MenuContri
         registry.registerCommand(
             HtmlCommands.HTML_RENDER,
             {
-                execute: () => open(this.openerService, new URI('').withScheme('my-html').withFragment(content))
+                execute: () => this.renderHtml(content)
             }
         );
+    }
+
+    renderHtml(htmlString: string): void {
+        open(this.openerService, new URI('').withScheme('my-html').withFragment(content));
     }
 
     registerMenus(menus: MenuModelRegistry): void {
